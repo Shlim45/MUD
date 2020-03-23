@@ -87,6 +87,8 @@ int main()
             break;
         }
 
+        std::cout << std::string(buf, 0, bytesReceived) << std::endl;
+
         // Echo message back to client
         send(clientSocket, buf, bytesReceived + 1, 0);  // returns size
 
